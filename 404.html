@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- SITIO DE DEMOSTRACIÓN. Espiga es una carpintería ficticia. -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Esta pieza no encaja · Espiga</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Sora:wght@400;500;600&family=Overpass+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+<style>
+  .perdida { min-height: 100svh; display: grid; align-content: center; gap: 1rem;
+             padding: clamp(3rem, 10vh, 7rem) var(--marco); max-width: 60ch; }
+  .perdida h1 { font-size: clamp(2rem, 1.2rem + 3.6vw, 4rem); }
+  .perdida svg { width: min(22rem, 80vw); height: auto; }
+</style>
+</head>
+<body>
+<main class="perdida">
+  <p class="indice">Error 404</p>
+  <svg viewBox="0 0 420 200" role="img" aria-label="Dos piezas de madera que no llegan a encajar.">
+    <title>Piezas separadas</title>
+    <path d="M10 40h150v34h40v52h-40v34H10z" fill="#B07F41" stroke="#231D18" stroke-width="3"/>
+    <path d="M410 40H250v34h40v52h-40v34h160z" fill="#8A5C3E" stroke="#231D18" stroke-width="3"/>
+    <path d="M205 100h40" stroke="#7A6A58" stroke-width="1.6" stroke-dasharray="5 5"/>
+  </svg>
+  <h1>Esta pieza no encaja</h1>
+  <p>El enlace lleva a una página que no existe. Vuelve al principio: allí sí está todo
+  a escuadra.</p>
+  <p><a class="boton boton--madera" href="index.html">Volver al taller</a></p>
+  <p class="pie__sello" style="border:0;padding:0">
+    <strong>Sitio de demostración.</strong> Espiga es un negocio ficticio; los muebles,
+    medidas y precios son de muestra.
+  </p>
+</main>
+</body>
+</html>
