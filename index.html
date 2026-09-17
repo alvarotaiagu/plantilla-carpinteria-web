@@ -1,0 +1,462 @@
+<!doctype html>
+<!--
+  ============================================================================
+  SITIO DE DEMOSTRACIÓN. «Espiga, carpintería a medida» es un negocio
+  FICTICIO, inventado para esta plantilla. Nombre, dirección, teléfono,
+  horarios, precios, plazos, muebles y personas son datos de muestra y no
+  corresponden a ningún negocio real. Los seis muebles están dibujados en SVG
+  con medidas inventadas: no son obra de ningún taller identificable.
+  No indexar, no citar como fuente.
+  Concepto: «Ensamble».
+  ============================================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Espiga · carpintería a medida (demostración)</title>
+<meta name="description" content="Plantilla de demostración para carpintería a medida. Espiga es un negocio ficticio: seis muebles con sus medidas, plazos claros y presupuesto sin compromiso.">
+<meta name="theme-color" content="#F2EAE0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Espiga · carpintería a medida (sitio de demostración)">
+<meta property="og:description" content="Negocio ficticio. Plantilla con concepto «Ensamble»: las piezas entran y encajan, como una espiga en su mortaja.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Sora:wght@400;500;600&family=Overpass+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Espiga",
+  "description": "Carpintería a medida con taller propio. Negocio ficticio usado como demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa do Serrín, 12",
+    "postalCode": "15300",
+    "addressLocality": "Betanzos",
+    "addressRegion": "A Coruña",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34981000058",
+  "email": "hola@espiga.example",
+  "priceRange": "€€",
+  "openingHours": ["Mo-Fr 08:30-13:30", "Mo-Fr 15:30-19:00"],
+  "disambiguatingDescription": "Negocio ficticio. Sitio de demostración."
+}
+</script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<div class="cursor" aria-hidden="true" data-cursor>
+  <span class="cursor__pieza"></span>
+  <span class="cursor__texto"></span>
+</div>
+
+<header class="cabecera" data-cabecera>
+  <a class="marca" href="#inicio">
+    <svg class="marca__icono" viewBox="0 0 40 24" aria-hidden="true" focusable="false">
+      <path d="M2 4h16v5h6V4h14v16H24v-5h-6v5H2z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    </svg>
+    <span class="marca__texto">Espiga</span>
+  </a>
+
+  <button class="hamburguesa" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>
+    <span class="hamburguesa__lineas" aria-hidden="true"><i></i><i></i></span>
+    <span>Menú</span>
+  </button>
+
+  <nav class="nav" id="menu-principal" aria-label="Navegación principal" data-menu>
+    <ul>
+      <li><a href="#muebles">Muebles</a></li>
+      <li><a href="#como">Cómo trabajamos</a></li>
+      <li><a href="#maderas">Maderas</a></li>
+      <li><a href="#taller">El taller</a></li>
+      <li><a href="#presupuesto">Presupuesto</a></li>
+    </ul>
+    <a class="boton boton--madera nav__cta" href="#presupuesto">Pedir presupuesto</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+  <!-- ══════════ HERO: EL ENSAMBLE ══════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero__texto">
+      <p class="kicker">Betanzos · carpintería a medida · desde 2005</p>
+      <h1 class="hero__titulo" data-char>Lo que encaja no necesita tornillos</h1>
+      <p class="hero__entrada">
+        Hacemos muebles para huecos que no son estándar: el bajo de la escalera, la
+        pared con el contador, el pasillo de ochenta y siete centímetros. Se mide, se
+        dibuja, se corta y se ensambla aquí mismo.
+      </p>
+      <div class="hero__acciones">
+        <a class="boton boton--madera" href="#presupuesto" data-iman>Pedir presupuesto</a>
+        <a class="boton boton--linea" href="#muebles" data-iman>Ver muebles</a>
+      </div>
+      <ul class="hero__cifras">
+        <li><b data-contador="21" data-sufijo="">0</b><span>años de taller</span></li>
+        <li><b data-contador="4" data-sufijo=" sem">0</b><span>de plazo medio</span></li>
+        <li><b data-contador="0" data-sufijo=" €">0</b><span>cuesta el presupuesto</span></li>
+      </ul>
+    </div>
+
+    <figure class="ensamble" data-ensamble>
+      <svg viewBox="0 0 420 260" role="img" aria-labelledby="titulo-ensamble">
+        <title id="titulo-ensamble">Dos piezas de madera con espiga y mortaja que encajan una en otra.</title>
+        <defs>
+          <clipPath id="veta-a"><path d="M10 70h190v120H10z"/></clipPath>
+          <clipPath id="veta-b"><path d="M220 70h190v120H220z"/></clipPath>
+        </defs>
+
+        <g data-pieza-a>
+          <path d="M10 70h150v34h40v52h-40v34H10z" fill="#B07F41"/>
+          <g clip-path="url(#veta-a)" stroke="#8A5F2B" stroke-width="1.6" fill="none" opacity="0.4">
+            <path d="M6 88C60 82 120 94 204 88"/><path d="M6 110C70 104 130 116 204 110"/>
+            <path d="M6 132C60 126 130 138 204 132"/><path d="M6 154C70 148 120 160 204 154"/>
+            <path d="M6 176C60 170 130 182 204 176"/>
+          </g>
+          <path d="M10 70h150v34h40v52h-40v34H10z" fill="none" stroke="#231D18" stroke-width="3"/>
+        </g>
+
+        <g data-pieza-b>
+          <path d="M410 70H260v34h-40v52h40v34h150z" fill="#8A5C3E"/>
+          <g clip-path="url(#veta-b)" stroke="#4E2F1C" stroke-width="1.6" fill="none" opacity="0.4">
+            <path d="M216 88c60-6 120 6 198 0"/><path d="M216 110c70-6 130 6 198 0"/>
+            <path d="M216 132c60-6 130 6 198 0"/><path d="M216 154c70-6 120 6 198 0"/>
+            <path d="M216 176c60-6 130 6 198 0"/>
+          </g>
+          <path d="M410 70H260v34h-40v52h40v34h150z" fill="none" stroke="#231D18" stroke-width="3"/>
+        </g>
+
+        <g data-cotas-ensamble stroke="#7A6A58" stroke-width="1.4" fill="none">
+          <path d="M200 44v-16"/><path d="M220 44v-16"/><path d="M200 36h20"/>
+          <text x="210" y="24" fill="#7A6A58" font-family="Overpass Mono, monospace" font-size="11" text-anchor="middle" stroke="none">20</text>
+          <path d="M14 214h180"/><path d="M14 208v12"/><path d="M194 208v12"/>
+          <text x="104" y="232" fill="#7A6A58" font-family="Overpass Mono, monospace" font-size="11" text-anchor="middle" stroke="none">espiga</text>
+          <path d="M226 214h180"/><path d="M226 208v12"/><path d="M406 208v12"/>
+          <text x="316" y="232" fill="#7A6A58" font-family="Overpass Mono, monospace" font-size="11" text-anchor="middle" stroke="none">mortaja</text>
+        </g>
+      </svg>
+      <figcaption>
+        <button class="ensamble__boton" type="button" data-ensamble-boton aria-live="polite">Separar las piezas</button>
+        <span class="ensamble__pie">Espiga y mortaja: el ensamble de toda la vida, sin un tornillo.</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ MUEBLES ══════════ -->
+  <section class="muebles" id="muebles" aria-labelledby="t-muebles">
+    <div class="seccion__cabeza">
+      <p class="indice">01 — Muebles</p>
+      <h2 id="t-muebles" data-char>Seis que hemos hecho más de una vez</h2>
+      <p class="parrafo">
+        No es un catálogo: es lo que más nos piden, con las medidas del último que
+        salió del taller. El tuyo tendrá otras, porque tu hueco es otro.
+      </p>
+    </div>
+
+    <ul class="rejilla">
+      <li class="mueble">
+        <img src="assets/muebles/mueble-estanteria.svg" width="420" height="340" loading="lazy" alt="Alzado dibujado de la estantería Ponte, con sus medidas acotadas.">
+        <div class="mueble__ficha">
+          <h3>Estantería Ponte</h3>
+          <p class="mueble__dato">Roble macizo · 280 × 265 cm · cuatro baldas</p>
+          <p>De suelo a techo y ensamblada en caja y espiga. Las baldas se pueden subir
+          o bajar antes de montarla, no después.</p>
+          <p class="mueble__precio">desde 1.180 €</p>
+        </div>
+      </li>
+      <li class="mueble">
+        <img src="assets/muebles/mueble-mesa.svg" width="420" height="340" loading="lazy" alt="Alzado dibujado de la mesa Serrín, con sus medidas acotadas.">
+        <div class="mueble__ficha">
+          <h3>Mesa Serrín</h3>
+          <p class="mueble__dato">Nogal · 200 × 90 × 75 cm · seis u ocho sitios</p>
+          <p>Tablero de una pieza cuando la tabla lo permite y de dos cuando no. Las
+          patas se desmontan para subirla por la escalera.</p>
+          <p class="mueble__precio">desde 1.640 €</p>
+        </div>
+      </li>
+      <li class="mueble">
+        <img src="assets/muebles/mueble-armario.svg" width="420" height="340" loading="lazy" alt="Alzado dibujado del frente de armario Barrica, con sus medidas acotadas.">
+        <div class="mueble__ficha">
+          <h3>Frente Barrica</h3>
+          <p class="mueble__dato">Fresno · 240 × 215 cm · dos hojas</p>
+          <p>Frente de armario empotrado, con el interior en tablero laminado. Es lo que
+          más se pide en pisos viejos, donde no hay dos huecos iguales.</p>
+          <p class="mueble__precio">desde 1.950 €</p>
+        </div>
+      </li>
+      <li class="mueble">
+        <img src="assets/muebles/mueble-banco.svg" width="420" height="340" loading="lazy" alt="Alzado dibujado del banco Cantón, con sus medidas acotadas.">
+        <div class="mueble__ficha">
+          <h3>Banco Cantón</h3>
+          <p class="mueble__dato">Pino tratado · 160 × 92 cm · exterior</p>
+          <p>Para entrada o para galería. Aguanta la lluvia si se le da aceite una vez al
+          año; si no, se pone gris, que a mucha gente le gusta más.</p>
+          <p class="mueble__precio">desde 540 €</p>
+        </div>
+      </li>
+      <li class="mueble">
+        <img src="assets/muebles/mueble-cocina.svg" width="420" height="340" loading="lazy" alt="Alzado dibujado de la cocina Fornos, con sus medidas acotadas.">
+        <div class="mueble__ficha">
+          <h3>Cocina Fornos</h3>
+          <p class="mueble__dato">Roble y tablero hidrófugo · 320 × 230 cm</p>
+          <p>Frentes de madera y cuerpos de tablero, que es lo sensato en una cocina.
+          La encimera la pone el marmolista, nosotros dejamos la medida.</p>
+          <p class="mueble__precio">desde 4.200 €</p>
+        </div>
+      </li>
+      <li class="mueble">
+        <img src="assets/muebles/mueble-escritorio.svg" width="420" height="340" loading="lazy" alt="Alzado dibujado del escritorio Fento, con sus medidas acotadas.">
+        <div class="mueble__ficha">
+          <h3>Escritorio Fento</h3>
+          <p class="mueble__dato">Nogal · 160 × 70 × 74 cm · tres cajones</p>
+          <p>Cajones con guía de madera, de los que hacen ruido de cajón. Se puede pasar
+          el cable por detrás sin que se vea.</p>
+          <p class="mueble__precio">desde 980 €</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="aviso">
+      Modelos, medidas y precios inventados para esta demostración. Los alzados están
+      dibujados en SVG para la plantilla: no son obra de ningún taller real.
+    </p>
+  </section>
+
+  <!-- ══════════ CÓMO TRABAJAMOS ══════════ -->
+  <section class="como" id="como" aria-labelledby="t-como">
+    <div class="seccion__cabeza">
+      <p class="indice">02 — Cómo trabajamos</p>
+      <h2 id="t-como" data-char>De la visita al montaje, cinco pasos</h2>
+    </div>
+
+    <ol class="pasos">
+      <li>
+        <p class="pasos__num">01</p>
+        <h3>La visita</h3>
+        <p>Vamos a tu casa con el metro. Medimos el hueco, miramos por dónde pasan los
+        cables y preguntamos qué vas a guardar ahí dentro.</p>
+        <p class="pasos__dato">Gratis · 45 min</p>
+      </li>
+      <li>
+        <p class="pasos__num">02</p>
+        <h3>El dibujo</h3>
+        <p>Un alzado como los de arriba, con las medidas escritas. Se cambia las veces
+        que haga falta hasta que lo ves claro.</p>
+        <p class="pasos__dato">3 a 5 días</p>
+      </li>
+      <li>
+        <p class="pasos__num">03</p>
+        <h3>El presupuesto</h3>
+        <p>Cerrado y por escrito, con la madera y los herrajes detallados. Si sube algo
+        durante la obra, se avisa antes, no después.</p>
+        <p class="pasos__dato">Sin compromiso</p>
+      </li>
+      <li>
+        <p class="pasos__num">04</p>
+        <h3>El taller</h3>
+        <p>Corte, ensamble y acabado. Aquí es donde están las cuatro semanas: la madera
+        maciza hay que dejarla asentar entre fase y fase.</p>
+        <p class="pasos__dato">3 a 5 semanas</p>
+      </li>
+      <li>
+        <p class="pasos__num">05</p>
+        <h3>El montaje</h3>
+        <p>Un día en casa, con aspirador. Si el suelo está desnivelado —y lo está casi
+        siempre—, se ajusta allí mismo.</p>
+        <p class="pasos__dato">1 jornada</p>
+      </li>
+    </ol>
+
+    <figure class="como__foto">
+      <img src="assets/foto/w800/cepillo.jpg"
+           srcset="assets/foto/w800/cepillo.jpg 800w, assets/foto/w1600/cepillo.jpg 1600w"
+           sizes="(max-width: 900px) 92vw, 60vw"
+           width="1600" height="1703" loading="lazy"
+           alt="Manos pasando un cepillo eléctrico sobre una tabla, con las virutas saltando.">
+      <figcaption>Fotografía de archivo: el taller no es este, que es inventado.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ MADERAS ══════════ -->
+  <section class="maderas" id="maderas" aria-labelledby="t-maderas">
+    <div class="seccion__cabeza">
+      <p class="indice">03 — Maderas</p>
+      <h2 id="t-maderas" data-char>Cuatro maderas y para qué sirve cada una</h2>
+    </div>
+
+    <table class="tabla">
+      <caption class="visualmente-oculta">Maderas con las que trabaja el taller</caption>
+      <thead><tr><th scope="col">Madera</th><th scope="col">Precio</th><th scope="col">Para qué va bien</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Pino del país</th><td>€</td><td>Exterior, estanterías de trastero y todo lo que se vaya a pintar.</td></tr>
+        <tr><th scope="row">Roble</th><td>€€€</td><td>Lo que se usa todos los días: mesas, cocinas, escaleras. Dura una vida.</td></tr>
+        <tr><th scope="row">Fresno</th><td>€€</td><td>Claro y elástico. Buen término medio para armarios y frentes grandes.</td></tr>
+        <tr><th scope="row">Nogal</th><td>€€€€</td><td>Para una pieza sola que quieras que se note. No lo recomendamos para toda una casa.</td></tr>
+      </tbody>
+    </table>
+
+    <aside class="maderas__nota">
+      <h3>Lo que decimos siempre</h3>
+      <ul>
+        <li>La madera maciza se mueve con la humedad. Un mueble bien hecho lo tiene en cuenta; uno barato, no.</li>
+        <li>El tablero no es el enemigo: dentro de un armario aguanta mejor y pesa menos.</li>
+        <li>Si el presupuesto no llega para roble macizo, es mejor chapa de roble bien puesta que roble malo.</li>
+        <li>Los nudos no son un defecto. Si los quieres sin nudos, se paga.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ══════════ EL TALLER ══════════ -->
+  <section class="taller" id="taller" aria-labelledby="t-taller">
+    <div class="seccion__cabeza">
+      <p class="indice">04 — El taller</p>
+      <h2 id="t-taller" data-char>Tres personas, 400 metros y mucho serrín</h2>
+    </div>
+
+    <div class="taller__rejilla">
+      <ul class="fichas">
+        <li>
+          <h3>Manuel Andrade</h3>
+          <p class="fichas__papel">Carpintero · fundador</p>
+          <p>Abrió el taller en 2005 después de quince años en una fábrica de puertas.
+          Es quien va a medir y quien dibuja.</p>
+        </li>
+        <li>
+          <h3>Xiana Andrade</h3>
+          <p class="fichas__papel">Carpintera · ensamble y acabados</p>
+          <p>Segunda generación, con formación en restauración. Lleva los acabados y las
+          piezas que hay que rehacer de un mueble viejo.</p>
+        </li>
+        <li>
+          <h3>Fermín Doce</h3>
+          <p class="fichas__papel">Montaje y corte</p>
+          <p>Lleva la escuadradora y los montajes en casa. Si tu suelo tiene dos
+          centímetros de desnivel, lo va a saber antes que tú.</p>
+        </li>
+      </ul>
+
+      <figure class="taller__foto">
+        <img src="assets/foto/w800/banco.jpg"
+             srcset="assets/foto/w800/banco.jpg 800w, assets/foto/w1600/banco.jpg 1600w"
+             sizes="(max-width: 900px) 92vw, 32vw"
+             width="1600" height="2400" loading="lazy"
+             alt="Tabla de madera sobre un banco de trabajo con herramientas alrededor.">
+        <figcaption>Fotografía de archivo, no del taller de esta demostración.</figcaption>
+      </figure>
+    </div>
+    <p class="aviso">Personas inventadas para esta demostración.</p>
+  </section>
+
+  <!-- ══════════ PRESUPUESTO ══════════ -->
+  <section class="presupuesto" id="presupuesto" aria-labelledby="t-presupuesto">
+    <div class="seccion__cabeza">
+      <p class="indice">05 — Presupuesto</p>
+      <h2 id="t-presupuesto" data-char>Rúa do Serrín, 12</h2>
+    </div>
+
+    <div class="presupuesto__rejilla">
+      <form class="formulario" data-presupuesto novalidate>
+        <h3>Pedir presupuesto</h3>
+        <p class="formulario__texto">Cuéntanos el hueco y te llamamos para concertar la visita. El presupuesto no cuesta nada.</p>
+        <p class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </p>
+        <p class="campo">
+          <label for="tel">Teléfono</label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" required>
+        </p>
+        <p class="campo">
+          <label for="tipo">Qué necesitas</label>
+          <select id="tipo" name="tipo">
+            <option>Estantería o librería</option>
+            <option>Armario o frente</option>
+            <option>Mesa o escritorio</option>
+            <option>Cocina</option>
+            <option>Arreglar un mueble que ya tengo</option>
+            <option>Otra cosa</option>
+          </select>
+        </p>
+        <p class="campo">
+          <label for="medidas">Medidas del hueco, si las tienes</label>
+          <input id="medidas" name="medidas" type="text" placeholder="87 × 240 cm, por ejemplo">
+        </p>
+        <button class="boton boton--madera" type="submit" data-iman>Enviar</button>
+        <p class="formulario__estado" data-presupuesto-estado role="status"></p>
+        <p class="formulario__demo">Formulario de muestra: no envía nada a ningún sitio ni guarda lo que escribas.</p>
+      </form>
+
+      <div class="donde">
+        <p class="donde__estado" data-estado>Comprobando el horario…</p>
+        <address>
+          Rúa do Serrín, 12 · polígono de Piadela<br>
+          15300 Betanzos<br>
+          <a href="tel:+34981000058">981 00 00 58</a><br>
+          <a href="mailto:hola@espiga.example">hola@espiga.example</a>
+        </address>
+        <dl class="horario" data-horario>
+          <div data-dias="1,2,3,4,5"><dt>Lunes a viernes</dt><dd>08:30–13:30 · 15:30–19:00</dd></div>
+          <div data-dias="6,0"><dt>Sábado y domingo</dt><dd>Cerrado</dd></div>
+        </dl>
+        <p class="donde__nota">
+          El taller se puede visitar sin avisar, pero si vienes a ver madera es mejor
+          llamar: la que está buena no siempre está a la vista.
+        </p>
+        <div class="mapa" data-mapa>
+          <button class="boton boton--linea" type="button" data-mapa-boton>Cargar el mapa de Google</button>
+          <p class="mapa__aviso">El mapa se carga solo si lo pides: hasta entonces esta web no llama a ningún servidor de terceros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie__marca">
+    <svg class="marca__icono" viewBox="0 0 40 24" aria-hidden="true" focusable="false">
+      <path d="M2 4h16v5h6V4h14v16H24v-5h-6v5H2z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    </svg>
+    <p>Espiga · carpintería a medida<br>Rúa do Serrín, 12 · Betanzos</p>
+  </div>
+  <nav class="pie__nav" aria-label="Enlaces del pie">
+    <ul>
+      <li><a href="#muebles">Muebles</a></li>
+      <li><a href="#maderas">Maderas</a></li>
+      <li><a href="#presupuesto">Presupuesto</a></li>
+      <li><a href="legal.html">Aviso legal y privacidad</a></li>
+    </ul>
+  </nav>
+  <p class="pie__sello">
+    <strong>Sitio de demostración.</strong> Espiga es un negocio ficticio; los datos,
+    precios, plazos, muebles y personas son de muestra. Ningún dato de esta página
+    corresponde a un negocio real. Fotografías de archivo bajo licencia Pexels,
+    acreditadas en
+    <a href="https://github.com/alvarotaiagu/plantilla-carpinteria-web/blob/main/CREDITOS.md">CREDITOS.md</a>.
+  </p>
+</footer>
+
+<div class="cookie-banner" data-cookies hidden>
+  <p>Esta web usa una única cookie técnica para recordar que has visto este aviso. No hay analítica, ni seguimiento, ni cookies de terceros: el mapa de Google solo se carga si pulsas el botón.</p>
+  <div class="cookie-banner__acciones">
+    <button class="boton boton--madera" type="button" data-cookies-ok>Entendido</button>
+    <a class="boton boton--linea" href="legal.html#cookies">Leer más</a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
