@@ -52,9 +52,30 @@
   "disambiguatingDescription": "Negocio ficticio. Sitio de demostración."
 }
 </script>
+<!-- Sin JavaScript no hay quien levante la cortina: mejor no enseñarla. -->
+<noscript><style>.cortina { display: none !important; }</style></noscript>
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- Cortina «ensamble»: las dos piezas aprietan y la espiga sale de la mortaja. -->
+<div class="cortina cortina--carpinteria" data-cortina aria-hidden="true">
+  <div class="cortina__pieza cortina__pieza--der"></div>
+  <div class="cortina__pieza cortina__pieza--izq">
+    <svg class="cortina__espiga" viewBox="0 0 80 120" aria-hidden="true">
+      <rect x="2" y="2" width="76" height="116" rx="12"/>
+    </svg>
+  </div>
+  <div class="cortina__centro">
+    <svg class="cortina__cota" viewBox="0 0 240 40" aria-hidden="true">
+      <path pathLength="1" d="M10 20h220"/>
+      <path pathLength="1" d="M10 10v20"/>
+      <path pathLength="1" d="M230 10v20"/>
+    </svg>
+    <p class="cortina__marca">Espiga</p>
+    <p class="cortina__pie">a medida</p>
+  </div>
+</div>
+
 
 <div class="cursor" aria-hidden="true" data-cursor>
   <span class="cursor__pieza"></span>
